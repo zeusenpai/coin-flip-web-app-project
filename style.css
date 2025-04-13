@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+  
+  body {
+    background-color: #f8f3d9;
+  }
+  
+  #heading {
+    margin-top: 3vw;
+    font-family: "Rubik Spray Paint", cursive;
+    font-size: 12vw;
+    font-weight: 400;
+    color: #504b38;
+    text-align: center;
+  }
+  
+  .container {
+    background-color: #ebe5c2;
+    width: 62.5vw;
+    padding: 3.5vw;
+    margin: 5.2vw auto;
+    border-radius: 1vw;
+    box-shadow: 15px 30px 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .coin {
+    height: 30vw;
+    width: 30vw;
+    margin: 32px auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 3s;
+  }
+  
+  .coin img {
+    width: 100%;
+  }
+  
+  .heads,
+  .tails {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .heads {
+    transform: rotateY(0deg);
+  }
+  
+  .tails {
+    transform: rotateX(180deg);
+  }
+  
+  @keyframes spin-heads {
+    0% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX(2160deg);
+    }
+  }
+  
+  @keyframes spin-tails {
+    0% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX(1980deg);
+    }
+  }
+  
+  .buttons {
+    background-color: #ebe5c2;
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+    color: #504b38;
+    width: 40vw;
+    padding: 25px 0;
+    border: none;
+    font-size: 4vw;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #a9a37a;
+  }
+  
+  #flip-button {
+    background: #b9b28a;
+  }
+  
+  #myLabel {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+    color: #504b38;
+    background-color: #ebe5c2;
+    margin: 20px auto;
+    font-size: 5vw;
+    display: block;
+  }
+  
+  /* Toggle Styles */
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  .display {
+    position: fixed;
+    top: 2vw;
+    right: 2vw;
+    z-index: 999;
+  }
+  
+  .display label {
+    width: 100px;
+    height: 50px;
+    border-radius: 999px;
+    background: #f8f3d9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1) inset;
+    display: block;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: #f8f3d9;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+                -5px -5px 15px rgba(0, 0, 0, 0.05) inset;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(10%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  svg {
+    width: 20px;
+    position: absolute;
+  }
+  
+  .sun {
+    color: #ffd600;
+    opacity: 1;
+  }
+  
+  .moon {
+    color: white;
+    opacity: 0;
+  }
+  
+  /* Dark Mode State */
+  input[type="checkbox"]:checked ~ .display label {
+    background: #504b38;
+  }
+  
+  input[type="checkbox"]:checked ~ .display label .circle {
+    left: 100%;
+    transform: translate(-110%, -50%);
+    background: #504b38;
+  }
+  
+  input[type="checkbox"]:checked ~ .display label .sun {
+    opacity: 0;
+  }
+  
+  input[type="checkbox"]:checked ~ .display label .moon {
+    opacity: 1;
+  }
+  
+  body.dark-mode {
+    background-color: #504b38;
+  }
+
+  body.dark-mode .buttons {
+    background-color: #7a7557;
+  }
+  
+  body.dark-mode .container {
+    background-color: #7a7557;
+  }
+
+  body.dark-mode #myLabel {
+    background-color: #7a7557;
+    color: #f8f3d9;
+  }
+  body.dark-mode button,
+  body.dark-mode #heading {
+    background-color: #504b38;
+    color: #f8f3d9;
+  }
+  
+  body.dark-mode #flip-button {
+    background-color: #44412c;
+  }
+  

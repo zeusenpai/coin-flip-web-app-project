@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Rubik+Spray+Paint&display=swap" rel="stylesheet" />
+  <title>Flip!</title>
+</head>
+<body>
+  <input type="checkbox" id="toggle" />
+  <div class="display">
+    <label for="toggle">
+      <div class="circle">
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75Z"/>
+        </svg>
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M9.528 1.718a.75.75 0 0 1 .162.819..."/>
+        </svg>
+      </div>
+    </label>
+  </div>
+
+  <h1 id="heading">Flip!</h1>
+  <div class="container">
+    <div class="coin" id="coin">
+      <div class="heads">
+        <img src="head.png" alt="Heads" />
+      </div>
+      <div class="tails">
+        <img src="tail.png" alt="Tails" />
+      </div>
+    </div>
+    <div class="stats">
+      <label id="myLabel"></label>
+    </div>
+    <div class="buttons">
+      <button id="flip-button">Flip Coin</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
