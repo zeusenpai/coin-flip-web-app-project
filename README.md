@@ -20,3 +20,7 @@ This is a simple Coin Flip Web App built using HTML, CSS, and JavaScript. It all
 1. Clone this repository to your local machine:
    ```bash
    git clone https://github.com/your-username/coin-flip-web-app-project.git
+
+## Screenshots
+![Alt text](/Screenshots/screenshot1.png?raw=true "Flip!-Datk Mode")
+![Alt text](/Screenshots/screenshot2.png?raw=true "Flip!-Light Mode")
